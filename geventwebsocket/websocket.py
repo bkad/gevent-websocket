@@ -20,6 +20,7 @@ class WebSocketHixie(WebSocket):
         self.origin = environ.get('HTTP_ORIGIN')
         self.protocol = environ.get('HTTP_SEC_WEBSOCKET_PROTOCOL')
         self.path = environ.get('PATH_INFO')
+        self.socket = socket
         self.fobj = socket.makefile()
         self._writelock = Semaphore(1)
         self._write = socket.sendall
