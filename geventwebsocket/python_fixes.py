@@ -1,5 +1,7 @@
 import sys
+from errno import EINTR
 from socket import error as socket_error
+
 
 if sys.version_info[:2] == (2, 7):
     # Python 2.7 has a working BufferedReader but socket.makefile() does not
