@@ -111,7 +111,7 @@ class WebSocketHybi(WebSocket):
         self._writelock = Semaphore(1)
         self.socket = socket
         self._write = socket.sendall
-        self.fobj = makefile(socket)
+        self.fobj = socket.makefile()
         self.close_code = None
         self.close_message = None
         self._reading = False
