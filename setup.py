@@ -1,15 +1,15 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="gevent-websocket",
+    name="prat-geventwebsocket",
     version="0.3.6",
-    description="Websocket handler for the gevent pywsgi server, a Python network library",
+    description="Prat fork of Jeffrey Gelen's gevent Websocket handler",
     long_description=open("README.rst").read(),
-    author="Jeffrey Gelens",
-    author_email="jeffrey@noppo.pro",
+    author="Kevin Le",
+    author_email="solnovus@gmail.com",
     license="BSD",
-    url="https://bitbucket.org/Jeffrey/gevent-websocket",
-    download_url="https://bitbucket.org/Jeffrey/gevent-websocket",
+    url="https://github.com/bkad/gevent-websocket",
+    download_url="https://github.com/bkad/gevent-websocket",
     install_requires=("gevent", "greenlet"),
     packages=find_packages(exclude=["examples","tests"]),
     classifiers=[
